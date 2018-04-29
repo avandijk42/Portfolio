@@ -1,0 +1,12 @@
+
+#widget-title {
+  color: #FFF;
+  font-family: 'Open Sans', sans-serif, Arial, sans-serif;
+  font-weight: 100;
+  border-bottom: 4px solid #b82601;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0px 3px #0005;
+  text-shadow: -1px 2px 2px #0003;
+}

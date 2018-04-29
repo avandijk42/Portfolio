@@ -1,0 +1,38 @@
+.panel-title a:after {
+    font-family:Fontawesome;
+    content:'\f078';
+    transform:rotate(-180deg);
+    transition: transform 0.2s ease;
+    float:right;
+    font-size:17px;
+    font-weight:300;
+    margin-top:7px;
+}
+
+.panel-title a.collapsed:after {
+    font-family:Fontawesome;
+    content:'\f078';
+    transform:rotate(-90deg);
+    transition: transform 0.2s ease;
+}
+
+.panel-heading:hover{
+  background-color: #81377240;
+  transition: background-color 0.5s ease;
+}
+
+.panel-heading{
+  transition: background-color 0.5s ease;
+}
+
+.panel-title a{
+  display:block;
+  padding: 10px 15px;
+  margin: -10px -15px;
+  text-decoration: none;
+}
+
+.icon span{
+  line-height:40px;
+  font-size: 20px;
+}

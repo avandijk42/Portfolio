@@ -1,0 +1,6 @@
+{
+  "AdjustableBarGraph":{
+    "title":"ADJUSTABLE BAR GRAPH",
+    "description":"This widget allows the user to assign percent values to a variable number of bars in a bar graph, with the restriction that the percent values associated with the bars must all sum to 1.0. The inspiration for this widget was from an idea for a classroom grade-tracking application, where users enter information about each of their classes. This widget would be used to help the user manually enter their grade breakdowns for each of their courses, assignments, etc."
+  }
+}
