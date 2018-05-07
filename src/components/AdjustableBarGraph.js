@@ -1,5 +1,7 @@
 import React, { Component} from 'react';
 import AdjustableBar from './AdjustableBar';
+import {projectTitleStyle, projectDescriptionStyle} from './Base.js'
+import Blurbs from './../resources/blurbs.json'
 
 import '../styles/AdjustableBarGraph.css'
 
@@ -101,6 +103,8 @@ class AdjustableBarGraph extends Component {
     const handleXPositions = [...Array(this.state.barCount).keys()].map(i => (i+1) * handleSpacing + i * handleWidth)
     return (
       <div>
+        <h2 style={projectTitleStyle}> {Blurbs["AdjustableBarGraph"]["title"]} </h2>
+        <p style={projectDescriptionStyle}> {Blurbs["AdjustableBarGraph"]["description"]} </p>
         <div className="adjusting-bar"
           style={{
             width:adjustBarViewWidth,

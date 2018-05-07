@@ -1,55 +1,10 @@
 import React, { Component } from 'react'
+import {projectTitleStyle, projectDescriptionStyle} from './Base.js'
+import Blurbs from './../resources/blurbs.json'
 
-const styles={
-  board:{
-    width:600,
-    height:600,
-    backgroundColor:"#444",
-    marginLeft:30,
-    borderRadius:10,
-    boxShadow:"0px 0px 15px #0008",
-    border:"1px solid #000c",
-    display:"table",
-    borderSpacing:10,
-  },
-  row:{
-    width:"100%",
-    height:130,
-    display:"table-row",
-  },
-  cell:{
-    width:130,
-    height:130,
-    borderSpacing:"9px",
-    backgroundColor:"#0004",
-    borderRadius:5,
-    display:"table-cell",
-    fontSize:40,
-    textAlign:"center",
-    verticalAlign:"middle",
-    top:45,
-    color:"#FFF",
-  },
-  control:{
-    bar:{
-      width:600,
-      height:50,
-      margin:30
-    },
-    button:{
-      width:130,
-      height:50,
-      backgroundColor:"#b82601",
-      boxShadow: "-3px 3px 3px #0005"
-    },
-    label:{
-      fontSize: 20,
-      fontFamily: "'Roboto', sans-serif, Arial, sans-serif",
-      fontWeight: "500",
-      color: "#FFF",
-      textShadow: "-1px 1px 2px #000b",
-    }
-  }
+const focusShadow = {
+  true:"0px 0px 15px #CCC8",
+  false:"0px 0px 5px #0008"
 }
 
 export default class TwentyFourtyEight extends Component{
@@ -66,16 +21,18 @@ export default class TwentyFourtyEight extends Component{
     ]
     var board = this.randomRemaining( this.randomRemaining(empty) )
 
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
+
     this.state = {
-      board:board
+      board:board,
+      focused:false
     }
   }
 
   handlePress(e){
-    if (e.keyCode >= 37 && e.keyCode <= 40){
+    if (e.keyCode >= 37 && e.keyCode <= 40 && this.state.focused){
       e.preventDefault()
-
-      e.stopImmediatePropagation()
       const board = this.randomRemaining(this.squish(e.keyCode))
       if (board !== null){
         this.setState({
@@ -86,8 +43,57 @@ export default class TwentyFourtyEight extends Component{
     return false
   }
 
+  blockScroll(e){
+    if (e.keyCode >= 37 && e.keyCode <= 40 && this.state.focused){
+      e.preventDefault()
+    }
+  }
+
   squish(direction){
     var board = this.state.board
+    // const leftUp = direction === 37 || direction === 38
+    // const upDown = direction === 38 || direction === 40
+    //
+    // for (var i=0; i<4; i++){
+    //   var buffer = []
+    //   const dir = leftUp ? 1 : -1
+    //   const offset = leftUp ? 0 : 3
+    //   for (var j=0; j<4; j++){
+    //     const cur = dir*j + offset
+    //     if (upDown){
+    //       if (board[cur][i] !== 0){
+    //         buffer.push(board[cur][i])
+    //         board[cur][i] = 0
+    //       }
+    //     } else {
+    //       if (board[i][cur] !== 0){
+    //         buffer.push(board[i][cur])
+    //         board[i][cur] = 0
+    //       }
+    //     }
+    //   }
+    //   var results = []
+    //   for (var b=0; b<buffer.length; b++){
+    //     const neighbor = buffer[b] === buffer[b+1]
+    //     const modifier = neighbor ? 2 : 1
+    //     results.push(buffer[b]*modifier)
+    //     b += (neighbor ? 1 : 0)
+    //   }
+    //
+    //   const diff = leftUp ? 0 : 4 - results.length
+    //   const offset2 = leftUp ? 0 : results.length
+    //   for (var jb=0; jb<results.length; jb++){
+    //     if (upDown) {
+    //       board[jb + diff][i] = results[dir*jb + offset2]
+    //     } else {
+    //       board[i][jb + diff] = results[jb]
+    //     }
+    //   }
+    //
+    // }
+    // return board
+    //
+    //
     if (direction === 37 || direction === 39){
       //LEFT RIGHT
       for(var i=0; i<4; i++){
@@ -146,7 +152,21 @@ export default class TwentyFourtyEight extends Component{
   }
 
   componentDidMount() {
+    window.addEventListener('keydown', this.blockScroll.bind(this))
     window.addEventListener('keyup', this.handlePress.bind(this))
+    window.addEventListener('click', this.clickHandler.bind(this))
+  }
+
+  clickHandler(e){
+    if (this.wrapperRef && !this.wrapperRef.contains(e.target)) {
+      this.setState({focused:false})
+    } else if (this.wrapperRef) {
+      this.setState({focused:true})
+    }
+  }
+
+  setWrapperRef(node) {
+    this.wrapperRef = node;
   }
 
   randomRemaining(board){
@@ -165,8 +185,6 @@ export default class TwentyFourtyEight extends Component{
   }
 
   reset(e){
-    window.removeEventListener('keyup', this.handlePress.bind(this))
-    window.addEventListener('keyup', this.handlePress.bind(this))
     const empty = [
       [0,0,0,0],
       [0,0,0,0],
@@ -183,7 +201,7 @@ export default class TwentyFourtyEight extends Component{
   controlBar = () => {
     return(
     <div style={styles.control.bar}>
-      <button style={styles.control.button} onClick={(e) => this.reset(e)}>
+      <button style={styles.control.button} onClick={this.reset.bind(this)}>
         <div style={styles.control.label}> RESET </div>
       </button>
     </div>
@@ -191,26 +209,79 @@ export default class TwentyFourtyEight extends Component{
 
   render () {
     const board = this.state.board
+    const shadow = {boxShadow:focusShadow[this.state.focused]}
 
     return (
       <div>
-        <div style={styles.board}>
-          {[...Array(4).keys()].map(i =>
-            <div style={styles.row} key={i}>
-              {[...Array(4).keys()].map(j =>
-                <div style={styles.cell} key={i*4 + j}>
-                  {""+(board[i][j] !== 0 ? board[i][j] : "")}
+        <h2 style={projectTitleStyle}> {Blurbs["2048"]["title"]} </h2>
+        <p style={projectDescriptionStyle}> {Blurbs["2048"]["description"]} </p>
+        <div ref={this.setWrapperRef} style={{width:styles.board.width}}>
+          <div style={Object.assign(shadow,styles.board)}>
+              {[...Array(4).keys()].map(i =>
+                <div style={styles.row} key={i}>
+                  {[...Array(4).keys()].map(j =>
+                    <div style={styles.cell} key={i*4 + j}>
+                      {""+(board[i][j] !== 0 ? board[i][j] : "")}
+                    </div>
+                  )}
                 </div>
               )}
-            </div>
-          )}
-        </div>
-        <div style={styles.control.bar}>
-          <button style={styles.control.button} onClick={this.reset.bind(this)}>
-            <div style={styles.control.label}> RESET </div>
-          </button>
+          </div>
+          {this.controlBar()}
         </div>
       </div>
     )
+  }
+}
+
+const styles={
+  board:{
+    width:600,
+    height:600,
+    backgroundColor:"#444",
+    marginLeft:30,
+    borderRadius:10,
+    border:"1px solid #000c",
+    display:"table",
+    borderSpacing:10,
+    transition:'box-shadow 0.25s'
+  },
+  row:{
+    display:"table-row",
+    width:"100%",
+    height:130
+  },
+  cell:{
+    width:130,
+    height:130,
+    backgroundColor:"#0004",
+    borderRadius:5,
+    borderSpacing:9,
+    display:"table-cell",
+    fontSize:40,
+    textAlign:"center",
+    verticalAlign:"middle",
+    color:"#FFF",
+    transition:'1.0'
+  },
+  control:{
+    bar:{
+      width:600,
+      height:50,
+      margin:30
+    },
+    button:{
+      width:130,
+      height:50,
+      backgroundColor:"#b82601",
+      boxShadow: "-3px 3px 3px #0005"
+    },
+    label:{
+      fontSize: 20,
+      fontFamily: "'Roboto', sans-serif, Arial, sans-serif",
+      fontWeight: "500",
+      color: "#FFF",
+      textShadow: "-1px 1px 2px #000b",
+    }
   }
 }
