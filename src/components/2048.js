@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import {projectTitleStyle, projectDescriptionStyle} from './Base.js'
+import {projectDescriptionStyle} from './Base.js'
 import Blurbs from './../resources/blurbs.json'
 
 const focusShadow = {
-  true:"0px 0px 15px #CCC8",
+  true:"0px 0px 20px #000",
   false:"0px 0px 5px #0008"
 }
 
@@ -213,7 +213,6 @@ export default class TwentyFourtyEight extends Component{
 
     return (
       <div>
-        <h2 style={projectTitleStyle}> {Blurbs["2048"]["title"]} </h2>
         <p style={projectDescriptionStyle}> {Blurbs["2048"]["description"]} </p>
         <div ref={this.setWrapperRef} style={{width:styles.board.width}}>
           <div style={Object.assign(shadow,styles.board)}>
@@ -253,10 +252,8 @@ const styles={
   },
   cell:{
     width:130,
-    height:130,
     backgroundColor:"#0004",
     borderRadius:5,
-    borderSpacing:9,
     display:"table-cell",
     fontSize:40,
     textAlign:"center",

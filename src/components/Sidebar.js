@@ -16,7 +16,7 @@ class Sidebar extends Component {
 
   navRow = (desc, icon) => (
     <li role="presentation" className="navRow" key={desc}>
-      <a href={desc.toLowerCase()}>
+      <a href={"#/"+desc.toLowerCase()}>
         <div className={"navGlyph glyphicon "+ icon} aria-hidden="true"></div>
         <div id="navText">
           {desc}

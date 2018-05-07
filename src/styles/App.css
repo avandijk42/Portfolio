@@ -1,6 +1,5 @@
 .App {
   height:100vh;
-  background-size: 100%;
 }
 
 .page{
@@ -16,7 +15,7 @@
   position: absolute;
   overflow-y: scroll;
   left:300px;
-  background-color: #062f4ff8;
+  background-color: #062f4fee;
 }
 
 .App-logo {

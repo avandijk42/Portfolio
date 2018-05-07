@@ -17,7 +17,7 @@
 }
 
 .panel-heading:hover{
-  background-color: #81377240;
+  background-color: #DDD;
   transition: background-color 0.5s ease;
 }
 

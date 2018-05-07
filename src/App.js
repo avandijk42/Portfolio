@@ -5,9 +5,9 @@ import Timeline from './Pages/Timeline'
 import {Education} from './Pages/Education'
 import {Projects} from './Pages/Projects'
 import { pageTitleStyle } from './components/Base'
-import background from './resources/background.jpg'
+import background from './resources/paper.jpg'
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './styles/App.css';
 
 class App extends Component {
