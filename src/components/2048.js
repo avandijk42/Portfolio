@@ -164,6 +164,11 @@ export default class TwentyFourtyEight extends Component{
     </div>
   )}
 
+  colorForNum = (num) => {
+    const exp = num === 0 ? 0 : Math.log2(num)
+    return tileColors[exp]
+  }
+
   render () {
     const board = this.state.board
     const shadow = {boxShadow:focusShadow[this.state.focused]}
@@ -171,15 +176,16 @@ export default class TwentyFourtyEight extends Component{
     return (
       <div>
         <p style={projectDescriptionStyle}> {Blurbs["2048"]["description"]} </p>
-        <div ref={this.setWrapperRef} style={{width:styles.board.width}}>
+        <div ref={this.setWrapperRef} style={{width:styles.board.width, marginLeft:styles.board.marginLeft}}>
           <div style={{...shadow,...styles.board}}>
               {[...Array(4).keys()].map(i =>
                 [...Array(4).keys()].map(j =>
                   <div
                     style={{
-                      ...styles.cell,
+                      ...styles.cell, ...styles.cellFont,
                       left:j*styles.cell.width + (j+1)*10 + 12,
-                      top:i*styles.cell.height + (i+1)*10 + 12
+                      top:i*styles.cell.height + (i+1)*10 + 12,
+                      backgroundColor:this.colorForNum(board[i][j])
                     }}
                     key={i*4 + j}>
                     {""+(board[i][j] !== 0 ? board[i][j] : "")}
@@ -215,15 +221,19 @@ const styles={
   cell:{
     width:80,
     height:80,
-    backgroundColor:"#0004",
+    backgroundColor:"#656565",
     borderRadius:5,
     position:"absolute",
+    boxShadow:"0px 2px 2px #0008"
+  },
+  cellFont:{
     fontSize:40,
+    fontWeight:1000,
+    fontFamily:"'Roboto', sans-serif",
     textAlign:"center",
     verticalAlign:"middle",
-    color:"#FFF",
-    transition:'1.0',
-    boxShadow:"0px 2px 2px #0008"
+    color:"#1c1c1c",
+    textShadow:"-1px 1px 1px #0004"
   },
   control:{
     bar:{
@@ -247,3 +257,17 @@ const styles={
     }
   }
 }
+
+const tileColors = [
+  styles.cell.backgroundColor,
+  "#6b7981",
+  "#59768c",
+  "#3c69a0",
+  "#33827e",
+  "#118e48",
+  "#4fab20",
+  "#b1b92e",
+  "#bd5f27",
+  "#c1481a",
+  "#c30303"
+]
