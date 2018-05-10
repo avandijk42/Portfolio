@@ -5,7 +5,7 @@ import Blurbs from './../resources/blurbs.json'
 
 import '../styles/AdjustableBarGraph.css'
 
-var [adjustBarViewWidth, adjustBarViewHeight] = [450.0, 400.0];
+var [adjustBarViewWidth, adjustBarViewHeight] = [400.0, 400.0];
 
 const percents = (N) => [...Array(N).keys()].map(i =>
   1.0 / N

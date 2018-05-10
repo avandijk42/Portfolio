@@ -26,7 +26,7 @@ export default class TwentyFourtyEight extends Component{
 
     this.state = {
       board:board,
-      focused:false
+      focused:true
     }
   }
 
@@ -235,8 +235,8 @@ export default class TwentyFourtyEight extends Component{
 
 const styles={
   board:{
-    width:600,
-    height:600,
+    width:400,
+    height:400,
     backgroundColor:"#444",
     marginLeft:30,
     borderRadius:10,
@@ -248,10 +248,10 @@ const styles={
   row:{
     display:"table-row",
     width:"100%",
-    height:130
+    height:80
   },
   cell:{
-    width:130,
+    width:80,
     backgroundColor:"#0004",
     borderRadius:5,
     display:"table-cell",
@@ -259,19 +259,21 @@ const styles={
     textAlign:"center",
     verticalAlign:"middle",
     color:"#FFF",
-    transition:'1.0'
+    transition:'1.0',
+    boxShadow:"0px 2px 2px #0008"
   },
   control:{
     bar:{
-      width:600,
+      width:400,
       height:50,
       margin:30
     },
     button:{
       width:130,
       height:50,
+      borderRadius:5,
       backgroundColor:"#b82601",
-      boxShadow: "-3px 3px 3px #0005"
+      boxShadow: "-1px 2px 7px #000c"
     },
     label:{
       fontSize: 20,

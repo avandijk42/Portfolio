@@ -1,5 +1,6 @@
 .App {
   height:100vh;
+  background-size: 100%;
 }
 
 .page{
@@ -16,6 +17,7 @@
   overflow-y: scroll;
   left:300px;
   background-color: #062f4fee;
+  /*background-color: white;*/
 }
 
 .App-logo {
@@ -71,10 +73,4 @@
 .navbar {
   background-color: #070a00;
   width:100%;
-}
-
-h1 {
-  font-family:'Open Sans', sans-serif, Arial, sans-serif;
-  font-weight: 600;
-  color: #FFF;
 }

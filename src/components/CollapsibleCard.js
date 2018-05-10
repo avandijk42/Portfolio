@@ -8,7 +8,7 @@ let styles = {
     width: "calc(100%-30px)",
     marginLeft:30,
     marginRight:30,
-    marginBottom:15,
+    marginBottom:30,
     // border: "2px solid #b82601",
     boxShadow: "0px 0px 10px #0008"
   },
@@ -33,7 +33,7 @@ export default class CollapsibleCard extends Component{
 
   render(){
     return(
-      <Panel eventKey={this.props.eventKey} style={styles.card}>
+      <Panel eventKey={this.props.eventKey} style={styles.card} defaultExpanded>
         <Panel.Heading>
           <Panel.Title toggle={this.props.collapsible} style={{display:"inline"}}>
             {this.props.icon}

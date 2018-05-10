@@ -1,0 +1,236 @@
+{
+  "Spring 2018":{
+    "gpa":"-TBD-",
+    "classes":[
+      {
+        "title":"Intelligent Visual Computing",
+        "description":[
+          "Leveraged neural networks and other machine learning algorithms to solve problems related to images and 3D models.",
+          "Some problems included image classification using Convolutional Neural Networks, surface denoising using Conditional Random Fields, and mapping voice recordings to facial animations via Long Short-Term Memory RNN",
+          "Language: MATLAB"
+        ]
+      },
+      {
+        "title":"Practice & Application of Data Management",
+        "description":[
+          "Studied the use of PostgreSQL Database Management System to manipulate and manage large data sets, and learning the challenges and solution that arise thereof.",
+          "Topics included Views, SQL Injection and how to prevent it, Boyce-Codd Normal Form, Hadoop and MapReduce, Parallelization, ER Modelling, and Database Tuning.",
+          "Languages: SQL, Java, Pig"
+        ]
+      },
+      {
+        "title":"Computational Linguistics: Use & Meaning",
+        "description":[
+          "Covered advanced methods in analyzing text and processing natural language with the use the Natural Language Toolkit.",
+          "Investigated different applications of Supervised Learning for linguistic analysis.",
+          "Language: Python"
+        ]
+      },
+      {
+        "title":"Language Acquisition",
+        "description":[
+          "Investigated linguistic theory and how it can explain the paths of acquisition which children take in learning their first language.",
+          "Conducted rigorous social experiments to capture linguistic knowledge of particpants to draw conclusions about innate linguistic abilities.",
+          "Explored what language acquisition reveals about the human mind, and the uniqueness and innateness of human language and cognition."
+        ]
+      }
+    ]
+  },
+  "Fall 2017":{
+    "gpa":"3.866",
+    "classes":[
+      {
+        "title":"Machine Learning",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Intro to Human-Computer Interaction",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Natural Language Processing",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Intro to Computational Linguistics",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Spring 2017":{
+    "gpa":"3.863",
+    "classes":[
+      {
+        "title":"Web Programming",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Artificial Intelligence",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Social Issues in Computing",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Introduction to Syntax",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Fall 2016":{
+    "gpa":"3.833",
+    "classes":[
+      {
+        "title":"Introduction to Algorithms",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Image Synthesis",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Intro to HTML/CSS",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Spring 2016":{
+    "gpa":"3.795",
+    "classes":[
+      {
+        "title":"Introduction to Computation",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Practice & Application of Data Management",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Computational Linguistics: Use & Meaning",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Language Acquisition",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Fall 2015":{
+    "gpa":"3.728",
+    "classes":[
+      {
+        "title":"Intelligent Visual Computing",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Practice & Application of Data Management",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Computational Linguistics: Use & Meaning",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Language Acquisition",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Spring 2015":{
+    "gpa":"3.635",
+    "classes":[
+      {
+        "title":"Intelligent Visual Computing",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Practice & Application of Data Management",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Computational Linguistics: Use & Meaning",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Language Acquisition",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  },
+  "Fall 2014":{
+    "gpa":"3.675",
+    "classes":[
+      {
+        "title":"Intelligent Visual Computing",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Practice & Application of Data Management",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Computational Linguistics: Use & Meaning",
+        "description":[
+          ""
+        ]
+      },
+      {
+        "title":"Language Acquisition",
+        "description":[
+          ""
+        ]
+      }
+    ]
+  }
+}

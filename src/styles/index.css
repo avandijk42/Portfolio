@@ -22,3 +22,16 @@ button{
 button:focus{
   outline: 0px;
 }
+
+p {
+  font-family:'Open Sans', sans-serif, Arial, sans-serif;
+  font-weight: 100;
+  color: #000;
+  font-size: 12px;
+}
+
+h1 {
+  font-family:'Open Sans', sans-serif, Arial, sans-serif;
+  font-weight: 600;
+  color: #FFF;
+}

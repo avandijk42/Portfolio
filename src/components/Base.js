@@ -11,6 +11,7 @@ export let pageTitleStyle = {
   textShadow: "-1px 2px 2px #0003",
   backgroundColor: "#FFF2",
   marginTop:0,
+  marginBottom:30,
   paddingTop:10
 }
 export let cardIconStyle = {

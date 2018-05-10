@@ -5,7 +5,7 @@ import Timeline from './Pages/Timeline'
 import {Education} from './Pages/Education'
 import {Projects} from './Pages/Projects'
 import { pageTitleStyle } from './components/Base'
-import background from './resources/paper.jpg'
+import background from './resources/amsterdam.jpg'
 
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -37,7 +37,6 @@ class App extends Component {
                   <Route exact path="/timeline" render={() => (
                     <div>
                       <Timeline id="one"/>
-                      <div style={{height:200}} />
                     </div>
                   )} />
                 </div>

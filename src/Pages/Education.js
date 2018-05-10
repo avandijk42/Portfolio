@@ -4,9 +4,9 @@ import {pageTitleStyle, cardIconStyle} from './../components/Base.js'
 import {PanelGroup} from 'react-bootstrap'
 
 import umass from '../resources/umass.png'
+import jsonData from '../resources/blurbs/Education.json'
 
 export let Education = () => {
-
 
   const card = (id, icon, title, subtitle, body) => {
     const iconImage = (
@@ -14,7 +14,13 @@ export let Education = () => {
     )
 
     return (
-      <CollapsibleCard icon={iconImage} title={title} subtitle={subtitle} eventKey={id}>
+      <CollapsibleCard
+        icon={iconImage}
+        title={title}
+        subtitle={subtitle}
+        eventKey={id}
+        collapsible
+      >
         {body}
       </CollapsibleCard>
     )
@@ -26,14 +32,38 @@ export let Education = () => {
     return sem + year
   }
 
+  const gpaSubtitle = (i) => (
+    "GPA " + jsonData[semester(i)]["gpa"]
+  )
+
+  const classBody = (i) => {
+    const allClassData = jsonData[semester(i)]["classes"]
+    return(
+      <ul>
+        {allClassData.map(c =>
+          <li>
+            {c["title"]}
+            <ul>
+              {
+                c["description"].map(line =>
+                  <li> {line} </li>
+                )
+              }
+            </ul>
+          </li>
+        )}
+      </ul>
+    )
+  }
+
   return(
     <div>
       <h1 style={pageTitleStyle}>
         Education
       </h1>
-      <PanelGroup accordion>
+      <PanelGroup>
         {[...Array(8).keys()].map(i =>
-          card(i, umass, semester(i), "", "")
+          card(i, umass, semester(i), gpaSubtitle(i), classBody(i))
         )}
       </PanelGroup>
     </div>

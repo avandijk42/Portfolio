@@ -1,7 +1,7 @@
 .adjusting-bar{
   margin: 10px;
   margin-bottom: 10px;
-  margin-left:80px;
+  margin-left:30px;
   background-color: #113c5dc0;
   overflow-y: hidden;
   box-shadow: -3px 3px 7px #0005;
@@ -22,22 +22,23 @@
 }
 
 #bar-view-ready, #bar-view-inactive {
-  background-color: #445e73
+  background-color: #6d879c
 }
 
 .controlbar{
-  margin-left: 80px;
+  margin-left: 30px;
   display:inline;
   text-align: center;
 }
 
 .control{
-  margin:10px;
-  width:130px;
+  margin:10px 20px 20px 0px;
+  width:120px;
   height: 50px;
   text-align: center;
-  background-color: #b82601;
-  box-shadow: -3px 3px 3px #0005;
+  border-radius:5px;
+  background-color:#b82601;
+  box-shadow: -1px 2px 7px #000c;
 }
 
 .control-label{
@@ -55,7 +56,7 @@
 }
 
 .percentsView {
-  margin-left: 80px;
+  margin-left: 30px;
   /* text-align: center; */
   display: flex;
 }
