@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CollapsibleCard from './../components/CollapsibleCard.js'
-import {pageTitleStyle, cardIconStyle} from './../components/Base.js'
+import {pageTitleStyle, cardIconStyle, cardListStyle} from './../components/Base.js'
 import {PanelGroup} from 'react-bootstrap'
 
 import cisco from '../resources/cisco.png'
@@ -20,14 +20,18 @@ export default class Timeline extends Component{
 
     console.log(desc)
     return (
-      <div>
-        <h3 style={styles.positionName}> {desc} </h3>
-        <ul>
-          {lines.map(i =>
-            <li style={styles.jobDescription}> {i} </li>
-          )}
-        </ul>
-      </div>
+      <ul>
+        <li style={cardListStyle.title}>
+          {desc}
+          <ul>
+            {
+              lines.map(line =>
+                <li style={cardListStyle.listItem}> {line} </li>
+              )
+            }
+          </ul>
+        </li>
+      </ul>
     )
   }
 

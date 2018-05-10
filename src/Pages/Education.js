@@ -1,6 +1,6 @@
 import React from 'react'
 import CollapsibleCard from './../components/CollapsibleCard.js'
-import {pageTitleStyle, cardIconStyle} from './../components/Base.js'
+import {pageTitleStyle, cardIconStyle, cardListStyle} from './../components/Base.js'
 import {PanelGroup} from 'react-bootstrap'
 
 import umass from '../resources/umass.png'
@@ -41,12 +41,12 @@ export let Education = () => {
     return(
       <ul>
         {allClassData.map(c =>
-          <li style={styles.courseName}>
+          <li style={cardListStyle.title}>
             {c["title"]}
             <ul>
               {
                 c["description"].map(line =>
-                  <li style={styles.courseDescription}> {line} </li>
+                  <li style={cardListStyle.listItem}> {line} </li>
                 )
               }
             </ul>
@@ -68,19 +68,4 @@ export let Education = () => {
       </PanelGroup>
     </div>
   )
-}
-
-const styles = {
-  courseName:{
-    fontFamily:"'Roboto', sans-serif",
-    fontWeight:600,
-    fontSize:22,
-    listStyleType:"none"
-  },
-  courseDescription:{
-    fontFamily:"'Montserrat', sans-serif",
-    fontWeight:100,
-    fontSize:20,
-    listStyleType:"disc"
-  }
 }

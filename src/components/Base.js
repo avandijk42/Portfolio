@@ -41,3 +41,19 @@ export let projectDescriptionStyle = {
   fontSize:17,
   margin:30
 }
+
+export let cardListStyle = {
+  title:{
+    fontFamily:"'Roboto', sans-serif",
+    fontWeight:600,
+    fontSize:22,
+    listStyleType:"none",
+    paddingTop:10
+  },
+  listItem:{
+    fontFamily:"'Montserrat', sans-serif",
+    fontWeight:800,
+    fontSize:20,
+    listStyleType:"disc"
+  }
+}
