@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import AdjustableBar from './AdjustableBar';
 import {projectDescriptionStyle} from './Base.js'
-import Blurbs from './../resources/blurbs.json'
+import Blurbs from './../resources/blurbs/Projects.json'
 
 import '../styles/AdjustableBarGraph.css'
 

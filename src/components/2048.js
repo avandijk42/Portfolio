@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {projectDescriptionStyle} from './Base.js'
-import Blurbs from './../resources/blurbs.json'
+import Blurbs from './../resources/blurbs/Projects.json'
 
 const focusShadow = {
   true:"0px 0px 20px #000",
@@ -167,7 +167,7 @@ export default class TwentyFourtyEight extends Component{
   render () {
     const board = this.state.board
     const shadow = {boxShadow:focusShadow[this.state.focused]}
-
+    console.log(Blurbs["2048"]["description"])
     return (
       <div>
         <p style={projectDescriptionStyle}> {Blurbs["2048"]["description"]} </p>
@@ -199,7 +199,7 @@ const styles={
     width:400,
     height:400,
     backgroundColor:"#444",
-    marginLeft:30,
+    marginLeft:"calc(50% - 200px)",
     borderRadius:10,
     border:"1px solid #000c",
     position:"relative",
@@ -229,7 +229,7 @@ const styles={
     bar:{
       width:400,
       height:50,
-      margin:30
+      margin:"30px 0px 30px calc(50% - 200px)"
     },
     button:{
       width:130,

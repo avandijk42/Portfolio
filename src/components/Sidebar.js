@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import headshot from './../resources/headshot.png';
+import headshot from './../resources/headshot-outline.png';
 import githubIcon from './../resources/github.png'
 import linkedInIcon from './../resources/linkedin.png'
 

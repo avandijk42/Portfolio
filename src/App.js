@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Timeline from './Pages/Timeline'
 import {Education} from './Pages/Education'
 import {Projects} from './Pages/Projects'
+import {About} from './Pages/About'
 import { pageTitleStyle } from './components/Base'
 import background from './resources/amsterdam.jpg'
 
@@ -23,13 +24,13 @@ class App extends Component {
                 <Sidebar />
                 <div id="Content">
                   <Route exact path="/" render={() => (
-                    <div><h1 style={pageTitleStyle}>Welcome!</h1></div>
+                    About()
                   )} />
                   <Route path="/projects" render={() => (
                     Projects()
                   )} />
                   <Route exact path="/about" render={() => (
-                    <div><h1 style={pageTitleStyle}>About</h1></div>
+                    About()
                   )} />
                   <Route exact path="/education" render={() => (
                     Education()
