@@ -72,13 +72,13 @@ export let Education = () => {
 
 const styles = {
   courseName:{
-    fontFamily:"'Roboto, sans-serif'",
+    fontFamily:"'Roboto', sans-serif",
     fontWeight:600,
     fontSize:22,
     listStyleType:"none"
   },
   courseDescription:{
-    fontFamily:"'Montserrat, sans-serif'",
+    fontFamily:"'Montserrat', sans-serif",
     fontWeight:100,
     fontSize:20,
     listStyleType:"disc"
