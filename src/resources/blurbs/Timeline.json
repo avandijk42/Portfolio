@@ -1,0 +1,34 @@
+{
+  "Cisco":{
+    "job_description":"Software Engineer",
+    "lines":[
+      "Member of the IoT and Apps team"
+    ]
+  },
+  "Project RAISE":{
+    "job_description":"Junior iOS Developer",
+    "lines":[
+      "Designed system architecture for complex user experience",
+      "Managed small group: followed agile development principles",
+      "Drove UX development cycle, including storyboarding and user testing",
+      "Designed and developed modules within larger iOS app codebase"
+    ]
+  },
+  "Amazon":{
+    "job_description":"Summer Software Development Engineering Intern",
+    "lines":[
+      "Member of the Visual Search and Mobile Innovation team",
+      "Developed new UX for the Camera Search feature on Amazon Mobile iOS app",
+      "Designed and developed backend Java service to handle responses and requests to and from this new UX",
+      "Researched and implemented a scalable React Native hybrid app approach for search features"
+    ]
+  },
+  "RedLance Comics":{
+    "job_description":"Junior Unity Intern",
+    "lines":[
+      "Unpaid internship learning cross-platform app development in Unity",
+      "Learned about layouts, database connectivity, advertisement integration, animation",
+      "Worked remotely with developers around the country"
+    ]
+  }
+}
