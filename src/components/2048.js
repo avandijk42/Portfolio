@@ -51,49 +51,6 @@ export default class TwentyFourtyEight extends Component{
 
   squish(direction){
     var board = this.state.board
-    // const leftUp = direction === 37 || direction === 38
-    // const upDown = direction === 38 || direction === 40
-    //
-    // for (var i=0; i<4; i++){
-    //   var buffer = []
-    //   const dir = leftUp ? 1 : -1
-    //   const offset = leftUp ? 0 : 3
-    //   for (var j=0; j<4; j++){
-    //     const cur = dir*j + offset
-    //     if (upDown){
-    //       if (board[cur][i] !== 0){
-    //         buffer.push(board[cur][i])
-    //         board[cur][i] = 0
-    //       }
-    //     } else {
-    //       if (board[i][cur] !== 0){
-    //         buffer.push(board[i][cur])
-    //         board[i][cur] = 0
-    //       }
-    //     }
-    //   }
-    //   var results = []
-    //   for (var b=0; b<buffer.length; b++){
-    //     const neighbor = buffer[b] === buffer[b+1]
-    //     const modifier = neighbor ? 2 : 1
-    //     results.push(buffer[b]*modifier)
-    //     b += (neighbor ? 1 : 0)
-    //   }
-    //
-    //   const diff = leftUp ? 0 : 4 - results.length
-    //   const offset2 = leftUp ? 0 : results.length
-    //   for (var jb=0; jb<results.length; jb++){
-    //     if (upDown) {
-    //       board[jb + diff][i] = results[dir*jb + offset2]
-    //     } else {
-    //       board[i][jb + diff] = results[jb]
-    //     }
-    //   }
-    //
-    // }
-    // return board
-    //
-    //
     if (direction === 37 || direction === 39){
       //LEFT RIGHT
       for(var i=0; i<4; i++){
@@ -215,15 +172,19 @@ export default class TwentyFourtyEight extends Component{
       <div>
         <p style={projectDescriptionStyle}> {Blurbs["2048"]["description"]} </p>
         <div ref={this.setWrapperRef} style={{width:styles.board.width}}>
-          <div style={Object.assign(shadow,styles.board)}>
+          <div style={{...shadow,...styles.board}}>
               {[...Array(4).keys()].map(i =>
-                <div style={styles.row} key={i}>
-                  {[...Array(4).keys()].map(j =>
-                    <div style={styles.cell} key={i*4 + j}>
-                      {""+(board[i][j] !== 0 ? board[i][j] : "")}
-                    </div>
-                  )}
-                </div>
+                [...Array(4).keys()].map(j =>
+                  <div
+                    style={{
+                      ...styles.cell,
+                      left:j*styles.cell.width + (j+1)*10 + 12,
+                      top:i*styles.cell.height + (i+1)*10 + 12
+                    }}
+                    key={i*4 + j}>
+                    {""+(board[i][j] !== 0 ? board[i][j] : "")}
+                  </div>
+                )
               )}
           </div>
           {this.controlBar()}
@@ -241,20 +202,22 @@ const styles={
     marginLeft:30,
     borderRadius:10,
     border:"1px solid #000c",
-    display:"table",
-    borderSpacing:10,
+    position:"relative",
+    // display:"table",
+    // borderSpacing:10,
     transition:'box-shadow 0.25s'
   },
   row:{
-    display:"table-row",
+    // display:"table-row",
     width:"100%",
     height:80
   },
   cell:{
     width:80,
+    height:80,
     backgroundColor:"#0004",
     borderRadius:5,
-    display:"table-cell",
+    position:"absolute",
     fontSize:40,
     textAlign:"center",
     verticalAlign:"middle",
