@@ -8,23 +8,23 @@ import amazon from '../resources/amazon.ico'
 import umass from '../resources/umass.png'
 import redlance from '../resources/redlance.PNG'
 
-import TimelineData from './../resources/blurbs.json'
+import TimelineData from './../resources/blurbs/Timeline.json'
 const job_desc_key = "job_description"
 const lines_key = "lines"
 
 export default class Timeline extends Component{
 
   cardBody = (key) => {
-    const desc = TimelineData["Timeline"][key][job_desc_key]
-    const lines = TimelineData["Timeline"][key][lines_key]
+    const desc = TimelineData[key][job_desc_key]
+    const lines = TimelineData[key][lines_key]
 
     console.log(desc)
     return (
       <div>
-        <h3> {desc} </h3>
+        <h3 style={styles.positionName}> {desc} </h3>
         <ul>
           {lines.map(i =>
-            <li> {i} </li>
+            <li style={styles.jobDescription}> {i} </li>
           )}
         </ul>
       </div>
@@ -57,5 +57,20 @@ export default class Timeline extends Component{
         </PanelGroup>
       </div>
     )
+  }
+}
+
+const styles = {
+  positionName:{
+    fontFamily:"'Roboto, sans-serif'",
+    fontWeight:600,
+    fontSize:22,
+    listStyleType:"none"
+  },
+  jobDescription:{
+    fontFamily:"'Montserrat, sans-serif'",
+    fontWeight:100,
+    fontSize:20,
+    listStyleType:"disc"
   }
 }

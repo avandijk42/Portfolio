@@ -41,12 +41,12 @@ export let Education = () => {
     return(
       <ul>
         {allClassData.map(c =>
-          <li>
+          <li style={styles.courseName}>
             {c["title"]}
             <ul>
               {
                 c["description"].map(line =>
-                  <li> {line} </li>
+                  <li style={styles.courseDescription}> {line} </li>
                 )
               }
             </ul>
@@ -68,4 +68,19 @@ export let Education = () => {
       </PanelGroup>
     </div>
   )
+}
+
+const styles = {
+  courseName:{
+    fontFamily:"'Roboto, sans-serif'",
+    fontWeight:600,
+    fontSize:22,
+    listStyleType:"none"
+  },
+  courseDescription:{
+    fontFamily:"'Montserrat, sans-serif'",
+    fontWeight:100,
+    fontSize:20,
+    listStyleType:"disc"
+  }
 }

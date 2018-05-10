@@ -35,8 +35,9 @@ export let projectTitleStyle = {
 }
 
 export let projectDescriptionStyle = {
-  color: "#000",
+  color: "#000a",
   fontFamily: "'Open Sans', sans-serif, Arial, sans-serif",
-  fontWeight: 50,
+  fontWeight: 200,
+  fontSize:17,
   margin:30
 }
