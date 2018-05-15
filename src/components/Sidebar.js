@@ -6,10 +6,10 @@ import linkedInIcon from './../resources/linkedin.png'
 import '../styles/Sidebar.css'
 
 const navRowData = {
-  "About":"glyphicon-info-sign",
-  "Education":"glyphicon-education",
-  "Timeline":"glyphicon-time",
-  "Projects":"glyphicon-list-alt"
+  "about":"glyphicon-info-sign",
+  "education":"glyphicon-education",
+  "timeline":"glyphicon-time",
+  "projects":"glyphicon-list-alt"
 }
 
 class Sidebar extends Component {
@@ -17,7 +17,7 @@ class Sidebar extends Component {
   navRow = (desc, icon) => (
     <li role="presentation" className="navRow" key={desc}>
       <a href={"#/"+desc.toLowerCase()}>
-        <div className={"navGlyph glyphicon "+ icon} aria-hidden="true"></div>
+        <div id="navSymbol" >{"# "}</div>
         <div id="navText">
           {desc}
         </div>

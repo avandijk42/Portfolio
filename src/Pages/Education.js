@@ -59,7 +59,7 @@ export let Education = () => {
   return(
     <div>
       <h1 style={pageTitleStyle}>
-        Education
+        education
       </h1>
       <PanelGroup>
         {[...Array(8).keys()].map(i =>

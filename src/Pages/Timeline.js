@@ -51,7 +51,7 @@ export default class Timeline extends Component{
     return(
       <div>
         <h1 style={pageTitleStyle}>
-          Timeline
+          timeline
         </h1>
         <PanelGroup>
           {this.card(0, cisco, "Cisco", "Aug 2018 - Now")}

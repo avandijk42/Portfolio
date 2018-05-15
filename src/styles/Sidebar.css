@@ -10,9 +10,9 @@
 #headshotContainer{
   width:calc(100%-10px);
   text-align: center;
-  padding:10px;
-  margin:5px;
-  margin-bottom: 30px;
+  padding: 30px 10px;
+  background-color: #0002;
+  border-bottom: 1px solid #b82601;
 }
 
 #headshot {
@@ -43,15 +43,15 @@
 }
 
 .navRow > a{
-  font-size: 25px;
+  font-size: 19px;
   color: #fff;
   text-shadow: 0px 1px 3px #0006
 }
 
 .nav > li > a {
   display: flex;
-  border-radius: 0px;
   transition: background-color 0.5s ease;
+  font-family: "Roboto";
 }
 
 .nav-pills > li > a:focus,
@@ -60,15 +60,16 @@
   background-color: #b82601bb;
 }
 
-.nav-pills > li> a:focus > .navGlyph,
-.nav-pills > li> a:hover > .navGlyph{
+.nav-pills > li> a:focus > #navSymbol,
+.nav-pills > li> a:hover > #navSymbol{
   color:#000;
 }
 
-.navGlyph{
+#navSymbol{
   padding-right:10px;
   transition: color 0.7s ease;
-  color:#813772
+  color:#813772;
+  font-family: "Roboto";
 }
 
 #linkIconContainer{
@@ -86,4 +87,62 @@
   height:100%;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+@media only screen and (max-width: 800px){
+  #sidebar{
+    height:205px;
+    /* background-color: #000000f4; */
+    background-color: #1c1e26;
+    box-shadow: inset 0px 5px 10px #0008;
+    width:100%;
+    position: absolute;
+    display:flex;
+  }
+
+  .nav > li > a {
+    transition: background-color 0.5s ease;
+    font-family: "Roboto";
+    display:flex;
+  }
+
+  #headshotContainer{
+    width:33%;
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #0002;
+    border: 0px;
+    border-right: 1px solid #b82601;
+  }
+
+  #headshot {
+    width:100px;
+    height:100px;
+  }
+
+  #linkIconContainer{
+    position: absolute;
+    right:0px;
+    border-left: 1px solid #FFF2;
+    width: 84px;
+    height: 100%;
+  }
+
+  .linkIcons{
+    width:40px;
+    height:40px;
+    margin: 20px 15px;
+  }
+
+  #navContainer{
+    width:calc(67% - 84px);
+  }
+
+  #nameText{
+    font-size: 24px;
+  }
+
+  #descriptionText{
+    font-size: 14px
+  }
 }

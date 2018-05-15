@@ -24,7 +24,7 @@ export let Projects = () => {
 
   return(
     <div>
-      <h1 style={pageTitleStyle}>Projects</h1>
+      <h1 style={pageTitleStyle}>projects</h1>
       <CollapsibleCard title='This Website' icon={reactIcon()}>
         {selfDescription()}
       </CollapsibleCard>

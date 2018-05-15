@@ -8,7 +8,7 @@ export let pageTitleStyle = {
   paddingBottom: 10,
   paddingLeft: 30,
   boxShadow: "0px 3px 5px #0005",
-  textShadow: "-1px 2px 2px #0003",
+  textShadow: "0px 2px 1px #888",
   backgroundColor: "#fff",
   marginTop:0,
   marginBottom:50,

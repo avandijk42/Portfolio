@@ -14,6 +14,7 @@ export let About = () => {
       color:"#000",
       borderBottom:"solid black 1px",
       paddingBottom:20,
+      textShadow:"0px 0px 20px #fff",
     },
     secondaryText:{
       color:"#000",
@@ -21,13 +22,14 @@ export let About = () => {
       fontWeight:400,
       fontSize:20,
       padding:"10px 50px",
+      textShadow:"0px 0px 20px #fff",
     }
   }
 
   return (
     <div>
       <h1 style={pageTitleStyle}>
-        About
+        about
       </h1>
       <h2 style={styles.mainText}> {jsonData["main"]} </h2>
       {jsonData["secondary"].map(line =>
