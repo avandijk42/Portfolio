@@ -16,8 +16,8 @@
   position: absolute;
   overflow-y: scroll;
   left:300px;
-  background-color: #062f4ff4;
-  /*background-color: white;*/
+  /* background-color: #062f4f; */
+  background-size: 250px;
 }
 
 .App-logo {

@@ -9,16 +9,17 @@ export let About = () => {
     mainText:{
       fontFamily: "'Montserrat', sans-serif",
       fontSize: 40,
+      fontWeight:800,
       margin:"0px 20px 20px 30px",
-      color:"#FFF",
-      textShadow:"0px 3px 15px #000"
+      color:"#000",
+      borderBottom:"solid black 1px",
+      paddingBottom:20,
     },
     secondaryText:{
-      color:"#FFF",
-      fontFamily: "'Montserrat', sans-serif, Arial, sans-serif",
-      fontWeight:300,
+      color:"#000",
+      fontFamily: "'Roboto', sans-serif, Arial, sans-serif",
+      fontWeight:400,
       fontSize:20,
-      textShadow:"0px 2px 5px #000",
       padding:"10px 50px",
     }
   }

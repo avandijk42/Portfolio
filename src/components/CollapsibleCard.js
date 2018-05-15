@@ -4,13 +4,13 @@ import './../styles/Cards.css'
 
 let styles = {
   card: {
-    backgroundColor: "#CCCC",
+    backgroundColor: "#f2f2f2",
     width: "calc(100%-30px)",
-    marginLeft:30,
-    marginRight:30,
-    marginBottom:30,
+    marginLeft:50,
+    marginRight:50,
+    marginBottom:50,
     // border: "2px solid #b82601",
-    boxShadow: "0px 0px 10px #0008"
+    boxShadow: "0px 3px 7px #0006"
   },
   cardTitle: {
     fontFamily:"'Open Sans', sans-serif, Arial, sans-serif",

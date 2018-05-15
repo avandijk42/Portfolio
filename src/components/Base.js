@@ -1,17 +1,17 @@
 export let barActiveState = {enabled: 0, ready: 1, disabled:2};
 export let widgetType = {barGraph: 0}
 export let pageTitleStyle = {
-  color: "#fff",
+  color: "#000",
   fontFamily: "'Open Sans', sans-serif, Arial, sans-serif",
-  fontWeight: 100,
+  fontWeight: 500,
   borderBottom: "4px solid #b82601",
   paddingBottom: 10,
   paddingLeft: 30,
   boxShadow: "0px 3px 5px #0005",
   textShadow: "-1px 2px 2px #0003",
-  backgroundColor: "#FFF2",
+  backgroundColor: "#fff",
   marginTop:0,
-  marginBottom:30,
+  marginBottom:50,
   paddingTop:10
 }
 export let cardIconStyle = {
@@ -48,7 +48,8 @@ export let cardListStyle = {
     fontWeight:600,
     fontSize:22,
     listStyleType:"none",
-    paddingTop:10
+    paddingTop:10,
+    color: "#000",
   },
   listItem:{
     fontFamily:"'Montserrat', sans-serif",

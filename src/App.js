@@ -6,7 +6,7 @@ import {Education} from './Pages/Education'
 import {Projects} from './Pages/Projects'
 import {About} from './Pages/About'
 import { pageTitleStyle } from './components/Base'
-import background from './resources/amsterdam.jpg'
+import background from './resources/hextile.png'
 
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -17,12 +17,12 @@ class App extends Component {
   render() {
     document.title = "Alan Vandijk Portfolio"
     return (
-      <div className="App" style={{backgroundImage:`url(${background})`}}>
+      <div className="App">
           <div className="page">
             <Router>
               <div>
                 <Sidebar />
-                <div id="Content">
+                <div id="Content" style={{backgroundImage:`url(${background})`}}>
                   <Route exact path="/" render={() => (
                     About()
                   )} />

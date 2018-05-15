@@ -4,6 +4,8 @@ import TwentyFourtyEight from './../components/2048.js'
 import AdjustableBarGraph from './../components/AdjustableBarGraph.js'
 import CollapsibleCard from './../components/CollapsibleCard.js'
 
+import './../styles/Projects.css'
+
 import reactLogo from './../logo.svg'
 
 export let Projects = () => {
@@ -26,12 +28,12 @@ export let Projects = () => {
       <CollapsibleCard title='This Website' icon={reactIcon()}>
         {selfDescription()}
       </CollapsibleCard>
-        <div style={{width:"50%", float:"left"}}>
+        <div className="project-card">
           <CollapsibleCard title='Two to the Eleventh' collapsible>
             <TwentyFourtyEight/>
           </CollapsibleCard>
         </div>
-        <div style={{width:"50%", float:"left"}}>
+        <div className="project-card">
           <CollapsibleCard title= "Adjustable Bar Graph" collapsible>
             <AdjustableBarGraph barCount={4}/>
           </CollapsibleCard>

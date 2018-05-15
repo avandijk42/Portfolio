@@ -9,6 +9,10 @@
     margin-top:7px;
 }
 
+.panel-default > .panel-heading {
+  background-color: #fafafa;
+}
+
 .panel-title a.collapsed:after {
     font-family:Fontawesome;
     content:'\f078';
@@ -17,7 +21,7 @@
 }
 
 .panel-heading:hover{
-  background-color: #DDD;
+  background-color: #f8f8f8;
   transition: background-color 0.5s ease;
 }
 
@@ -39,4 +43,5 @@
 
 .panel-body{
   padding: 0px 15px 15px 15px;
+  background-color: #cedeef80;
 }
