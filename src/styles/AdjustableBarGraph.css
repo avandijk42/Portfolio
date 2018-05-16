@@ -26,13 +26,13 @@
 }
 
 .controlbar{
-  margin-left: calc(50% - 200px);
+  margin-left: calc(50% - 210px);
   display:inline;
   text-align: center;
 }
 
 .control{
-  margin:10px 20px 20px 0px;
+  margin: 10px 10px 20px 10px;
   width:120px;
   height: 50px;
   text-align: center;

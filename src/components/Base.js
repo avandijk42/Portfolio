@@ -45,15 +45,18 @@ export let projectDescriptionStyle = {
 export let cardListStyle = {
   title:{
     fontFamily:"'Roboto', sans-serif",
-    fontWeight:600,
+    fontStyle:"italic",
+    fontWeight:500,
     fontSize:22,
     listStyleType:"none",
     paddingTop:10,
     color: "#000",
+    textShadow: "0px 1px 0px #888"
   },
   listItem:{
-    fontFamily:"'Montserrat', sans-serif",
-    fontWeight:800,
+    fontFamily:"'Open Sans', sans-serif",
+    fontStyle:"normal",
+    fontWeight:500,
     fontSize:20,
     listStyleType:"disc"
   }

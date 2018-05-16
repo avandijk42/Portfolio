@@ -1,5 +1,5 @@
 import React from 'react'
-import {pageTitleStyle} from './../components/Base.js'
+import {pageTitleStyle,projectDescriptionStyle} from './../components/Base.js'
 import TwentyFourtyEight from './../components/2048.js'
 import AdjustableBarGraph from './../components/AdjustableBarGraph.js'
 import CollapsibleCard from './../components/CollapsibleCard.js'
@@ -12,7 +12,7 @@ export let Projects = () => {
 
   const selfDescription = () => {
     return(
-      <p>
+      <p style={projectDescriptionStyle}>
         This website was developed from scratch, without the use of a template.
       </p>
     )
