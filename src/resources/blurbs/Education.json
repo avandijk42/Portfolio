@@ -42,25 +42,36 @@
       {
         "title":"Machine Learning",
         "description":[
-          ""
+          "Introduced to a wide variety of state-of-the-art machine learning algorithms and their respective implementations",
+          "Problem solving using the sklearn library in Python, competing amongst classmates via Kaggle for optimal solutions to homework problems",
+          "Focused both on practical usage of machine learning algorithms and the underlying theory and mathematical proofs behind them.",
+          "Language: Python"
         ]
       },
       {
         "title":"Intro to Human-Computer Interaction",
         "description":[
-          ""
+          "Introduced to principles of design within and outside the realm of UX development",
+          "Implemented front-end design for novel iOS app for final project",
+          "Discussed and practiced full UX design cycle including user interviews, testing, paper mockups and other low-fidelity protoyping methods.",
+          "Language: Swift"
         ]
       },
       {
         "title":"Natural Language Processing",
         "description":[
-          ""
+          "Investigated state-of-the-art natural language processing algorithms and problem-solving methods from an analytical perspective",
+          "Implemented several powerful NLP algorithms for tasks such as sentiment analysis, POS tagging, and word sense disambiguation (among others)",
+          "For final project, worked in group of 3 to develop novel supervised learning method for generating song lyrics based on genre.",
+          "Language: Python"
         ]
       },
       {
         "title":"Intro to Computational Linguistics",
         "description":[
-          ""
+          "Introductory NLP class from a Linguistics perspective",
+          "Exploration of different manners of problem-solving within the NLTK library",
+          "Language: Python"
         ]
       }
     ]
@@ -71,7 +82,10 @@
       {
         "title":"Web Programming",
         "description":[
-          ""
+          "Team-based learning class covering methods of developing modern, secure websites",
+          "Introduction to Bootstrap, React, and MongoDB",
+          "For class project, worked in team of 4 to develop React website: novel text editor for songwriters that suggests rhyming words, synonyms, etc.",
+          "Languages: HTML, CSS, JSX, ES6"
         ]
       },
       {
@@ -118,7 +132,7 @@
     ]
   },
   "Spring 2016":{
-    "gpa":"3.795",
+    "gpa":"3.728",
     "classes":[
       {
         "title":"Introduction to Computation",
@@ -127,19 +141,7 @@
         ]
       },
       {
-        "title":"Practice & Application of Data Management",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Computational Linguistics: Use & Meaning",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Language Acquisition",
+        "title":"Programming Methodology",
         "description":[
           ""
         ]
@@ -147,28 +149,22 @@
     ]
   },
   "Fall 2015":{
-    "gpa":"3.728",
+    "gpa":"3.795",
     "classes":[
       {
-        "title":"Intelligent Visual Computing",
+        "title":"Introduction to Linear Algebra",
         "description":[
           ""
         ]
       },
       {
-        "title":"Practice & Application of Data Management",
+        "title":"Reasoning Under Uncertainty",
         "description":[
           ""
         ]
       },
       {
-        "title":"Computational Linguistics: Use & Meaning",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Language Acquisition",
+        "title":"Computing Systems Principles",
         "description":[
           ""
         ]
@@ -176,28 +172,10 @@
     ]
   },
   "Spring 2015":{
-    "gpa":"3.635",
+    "gpa":"3.728",
     "classes":[
       {
-        "title":"Intelligent Visual Computing",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Practice & Application of Data Management",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Computational Linguistics: Use & Meaning",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Language Acquisition",
+        "title":"Programming with Data Structures",
         "description":[
           ""
         ]
@@ -205,28 +183,10 @@
     ]
   },
   "Fall 2014":{
-    "gpa":"3.675",
+    "gpa":"3.635",
     "classes":[
       {
-        "title":"Intelligent Visual Computing",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Practice & Application of Data Management",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Computational Linguistics: Use & Meaning",
-        "description":[
-          ""
-        ]
-      },
-      {
-        "title":"Language Acquisition",
+        "title":"Introduction to Problem Solving with Computers",
         "description":[
           ""
         ]
